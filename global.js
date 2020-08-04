@@ -1,3 +1,4 @@
+//更新时间：2020-08-04 16:41:19
 "use strict";
 var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
     return typeof e
@@ -13,7 +14,7 @@ var fed = {
                 $(this).parent().remove()
             }),
                 $('.fed-week-brns').click(function () {
-                    $('.fed-week-brns').removeClass('fed-text-green'), $(this).addClass('fed-text-green'), $.get($('.fed-week-href').attr('data-week') + ('?week=') + $(this).text().replace('周', '') + ('&nums=') + $('.fed-week-href').attr('data-nums'), function (g) {
+                    $('.fed-week-brns').removeClass('fed-text-green'), $(this).addClass('fed-text-green'), $.get($('.fed-week-href').attr('data-week') + ('?week=') + $(this).text().replace('鍛?, '') + ('&nums=') + $('.fed-week-href').attr('data-nums'), function (g) {
                         $('.fed-week-boxs').html(g)
                     })
                 }),
@@ -32,7 +33,7 @@ var fed = {
                 $('.fed-play-iframe').removeClass('fed-part-left')
         },
         user: function (e) {
-            $('.fed-part-height').height($('.fed-part-height').height()), fed.cookie.get('user_id') != void 0 && fed.cookie.get('user_id') != '' && ($('.fed-navs-login').addClass('fed-navs-user fed-event').removeClass('fed-navs-login').html('我的<span class="fed-part-move fed-edge-info fed-edge-bottom"></span>'), $(e).text(fed.cookie.get('user_name')))
+            $('.fed-part-height').height($('.fed-part-height').height()), fed.cookie.get('user_id') != void 0 && fed.cookie.get('user_id') != '' && ($('.fed-navs-login').addClass('fed-navs-user fed-event').removeClass('fed-navs-login').html('鎴戠殑<span class="fed-part-move fed-edge-info fed-edge-bottom"></span>'), $(e).text(fed.cookie.get('user_name')))
         },
         login: function (e) {
             $(e).click(function () {
@@ -94,12 +95,12 @@ var fed = {
             fed.global.click(), fed.global.swiper(), fed.global.user('.fed-pops-user li:first a'), fed.global.gotop('.fed-goto-toper', '.fed-goto-toper'), fed.global.login('.fed-navs-login'), fed.module.share(), fed.module.color(), fed.myuser.center('.fed-subm-login')
         },
         draws: function () {
-            /MSIE/i.test(navigator.userAgent) || (console.log('%c%c主题名称%c' + fed.global.vers, 'line-height:28px', 'padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px', 'color:#3fa9f5;font-size:16px;line-height:28px'), console.log('%c%c主题官网%c' + fed.global.jump, 'line-height:28px', 'padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px', 'color:#ff9900;font-size:16px;line-height:28px'))
+            /MSIE/i.test(navigator.userAgent) || (console.log('%c%c涓婚鍚嶇О%c' + fed.global.vers, 'line-height:28px', 'padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px', 'color:#3fa9f5;font-size:16px;line-height:28px'), console.log('%c%c涓婚瀹樼綉%c' + fed.global.jump, 'line-height:28px', 'padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px', 'color:#ff9900;font-size:16px;line-height:28px'))
         },
         mobile: function () {
             if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) return !0
         },
-        vers: 'vfed 3.2-re for 苹果CMSv10',
+        vers: 'vfed 3.2-re for 鑻规灉CMSv10',
         jump: '',
         tips: function (e) {
             alert(e)
@@ -139,19 +140,19 @@ var fed = {
         trace: function () {
             $.get('/cdn-cgi/trace', function (s) {
                 var k = s.match(/(colo=?)(\S*)/)[2],
-                    v = [['HKG', '香港'], ['YVR', '加拿大'], ['TPE', '台北'], ['NRT', '东京'], ['ICN', '仁川'], ['LHR', '伦敦'], ['CDG', '巴黎'], ['FRA', '法兰克福'], ['KUL', '马来西亚'], ['LAX', '洛杉矶'], ['SIN', '新加坡'], ['SJC', '圣塞何'], ['KBP', '乌克兰'], ['PRG', '布拉格']];
-                $('.fed-navs-route').html('节点：' + k).show();
-                for (var P = 0; P < v.length; P++) k == v[P][0] && $('.fed-navs-route').html('节点：' + v[P][1]).show()
+                    v = [['HKG', '棣欐腐'], ['YVR', '鍔犳嬁澶?], ['TPE', '鍙板寳'], ['NRT', '涓滀含'], ['ICN', '浠佸窛'], ['LHR', '浼︽暒'], ['CDG', '宸撮粠'], ['FRA', '娉曞叞鍏嬬'], ['KUL', '椹潵瑗夸簹'], ['LAX', '娲涙潐鐭?], ['SIN', '鏂板姞鍧?], ['SJC', '鍦ｅ浣?], ['KBP', '涔屽厠鍏?], ['PRG', '甯冩媺鏍?]];
+                $('.fed-navs-route').html('鑺傜偣锛? + k).show();
+                for (var P = 0; P < v.length; P++) k == v[P][0] && $('.fed-navs-route').html('鑺傜偣锛? + v[P][1]).show()
             })
         },
         color: function () {
             $('.fed-goto-color').click(function () {
-                for (var s, k = [['black', '黑色'], ['golds', '黑金'], ['colou', '彩色'], ['glass', '透明'], ['green', '绿色'], ['blues', '蓝色'], ['white', '橙色'], ['pinks', '粉色'], ['gules', '红色']], v = '<ul class="fed-colo-info fed-part-rows fed-padding fed-back-whits fed-event">', P = 0; P < k.length; P++) v += '<li class="fed-col-xs4 fed-padding"><a class="fed-btns-info fed-rims-info fed-padding fed-visible fed-colo-btns fed-colo-' + k[P][0] + ('" data-type="') + k[P][0] + ('" href="javascript:;">') + k[P][1] + ('</a>');
+                for (var s, k = [['black', '榛戣壊'], ['golds', '榛戦噾'], ['colou', '褰╄壊'], ['glass', '閫忔槑'], ['green', '缁胯壊'], ['blues', '钃濊壊'], ['white', '姗欒壊'], ['pinks', '绮夎壊'], ['gules', '绾㈣壊']], v = '<ul class="fed-colo-info fed-part-rows fed-padding fed-back-whits fed-event">', P = 0; P < k.length; P++) v += '<li class="fed-col-xs4 fed-padding"><a class="fed-btns-info fed-rims-info fed-padding fed-visible fed-colo-btns fed-colo-' + k[P][0] + ('" data-type="') + k[P][0] + ('" href="javascript:;">') + k[P][1] + ('</a>');
                 v += '</ul>', layer.open({
                     type: 1,
                     btn: !1,
                     id: 'color',
-                    title: '主题颜色',
+                    title: '涓婚棰滆壊',
                     content: v,
                     shadeClose: !0,
                     success: function () {
@@ -197,7 +198,7 @@ var fed = {
         taoke: function () {
             $.get(vfed.tpl + ('asset/fed/create.php?id=tao'), function (s) {
                 if (null == s || 0 == s.length) return !1;
-                for (var P, k = '', v = 0; v < s.length; v++) P = 6 == s.length && 3 < v ? ' fed-hide-sm fed-show-md-block' : '', k += '<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2' + P + ('">'), k += '<a target="_blank" class="fed-list-pics fed-lazy fed-part-2by3" href="' + s[v].ali_click + ('" style="background-image: url(') + s[v].Pic + (')"><span class="fed-list-play fed-list-arts fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">券后价￥') + s[v].Price + ('</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">领券￥') + s[v].Quan_price + ('</span></a>'), k += '<a target="_blank" class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="' + s[v].ali_click + ('">') + s[v].D_title + ('</a>'), k += '<span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">销量' + s[v].Sales_num + ('</span>'), k += '</li>';
+                for (var P, k = '', v = 0; v < s.length; v++) P = 6 == s.length && 3 < v ? ' fed-hide-sm fed-show-md-block' : '', k += '<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2' + P + ('">'), k += '<a target="_blank" class="fed-list-pics fed-lazy fed-part-2by3" href="' + s[v].ali_click + ('" style="background-image: url(') + s[v].Pic + (')"><span class="fed-list-play fed-list-arts fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">鍒稿悗浠凤骏') + s[v].Price + ('</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">棰嗗埜锟?) + s[v].Quan_price + ('</span></a>'), k += '<a target="_blank" class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="' + s[v].ali_click + ('">') + s[v].D_title + ('</a>'), k += '<span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">閿€閲? + s[v].Sales_num + ('</span>'), k += '</li>';
                 $('.fed-taor-info').html(k)
             })
         },
@@ -208,10 +209,10 @@ var fed = {
                     layer.alert(document.title + ' ' + g.msg, {
                         offset: '45%',
                         shadeClose: !0,
-                        title: '复制短连接',
-                        btn: '复制'
+                        title: '澶嶅埗鐭繛鎺?,
+                        btn: '澶嶅埗'
                     }, function () {
-                        if (!g.msg) return prompt('请手动复制链接分享', location.href);
+                        if (!g.msg) return prompt('璇锋墜鍔ㄥ鍒堕摼鎺ュ垎浜?, location.href);
                         if ($('body').append('<div id="fed-link-share" style="position: absolute;left:-200px; color: rgba(0,0,0,0);background-color: transparent">' + document.title + ' ' + g.msg + ('</div>')), navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
                             window.getSelection().removeAllRanges();
                             var R = document.getElementById('fed-link-share'),
@@ -226,7 +227,7 @@ var fed = {
                             var T = document.execCommand('Copy');
                             R.className = 'input', R.style.display = 'none'
                         }
-                        T ? layer.msg('短链接复制成功，请粘贴到你的QQ/微博/微信上分享给你的好友') : layer.msg('短链接复制成功，请粘贴到你的QQ/微博/微信上分享给你的好友')
+                        T ? layer.msg('鐭摼鎺ュ鍒舵垚鍔燂紝璇风矘璐村埌浣犵殑QQ/寰崥/寰俊涓婂垎浜粰浣犵殑濂藉弸') : layer.msg('鐭摼鎺ュ鍒舵垚鍔燂紝璇风矘璐村埌浣犵殑QQ/寰崥/寰俊涓婂垎浜粰浣犵殑濂藉弸')
                     })
                 }, 'json')
             })
@@ -356,7 +357,7 @@ var fed = {
                     $('.fed-pops-item').removeClass('fed-pops-back').eq(A - 1).addClass('fed-pops-back')); else if (0 < i.list.length) $('.fed-pops-box').hide(),
                     $('.fed-pops-key').show().html(P); else {
                     var P = '<ul class="fed-pops-list fed-back-whits">';
-                    P += '<li class="fed-pops-item fed-part-rows fed-line-bottom fed-margin-bottom"><a class="fed-part-eone" href="' + fed.search.jump(e) + ('"><span class="fed-name fed-part-eone fed-col-xs9">') + e + ('</span><span class="fed-part-eone fed-text-muted fed-text-right fed-col-xs3">查看更多</span></a></li>'), P += '</ul>',
+                    P += '<li class="fed-pops-item fed-part-rows fed-line-bottom fed-margin-bottom"><a class="fed-part-eone" href="' + fed.search.jump(e) + ('"><span class="fed-name fed-part-eone fed-col-xs9">') + e + ('</span><span class="fed-part-eone fed-text-muted fed-text-right fed-col-xs3">鏌ョ湅鏇村</span></a></li>'), P += '</ul>',
                         $('.fed-pops-box').show(),
                         $('.fed-pops-key').show().html(P)
                 }
@@ -372,12 +373,12 @@ var fed = {
                         type: 1,
                         btn: !1,
                         id: 'report',
-                        title: '视频报错',
+                        title: '瑙嗛鎶ラ敊',
                         content: g,
                         shadeClose: !0,
                         success: function () {
                             $('.fed-play-iframe').addClass('fed-part-left'),
-                                $('.fed-comm-fork .fed-comm-text').val($('.fed-play-data').attr('data-name') + $('.fed-play-data').attr('data-nums') + $('.fed-play-data').attr('data-show') + ('视频存在问题请检查修复。页面地址：') + location.href)
+                                $('.fed-comm-fork .fed-comm-text').val($('.fed-play-data').attr('data-name') + $('.fed-play-data').attr('data-nums') + $('.fed-play-data').attr('data-show') + ('瑙嗛瀛樺湪闂璇锋鏌ヤ慨澶嶃€傞〉闈㈠湴鍧€锛?) + location.href)
                         },
                         cancel: function () {
                             $('.fed-play-iframe').removeClass('fed-part-left')
@@ -401,7 +402,7 @@ var fed = {
         },
         sort: function (e, a) {
             $(document).on('click', e, function () {
-                $(this).text() == '视频排序：正序' ? $(this).text('视频排序：倒序') : $(this).text('视频排序：正序');
+                $(this).text() == '瑙嗛鎺掑簭锛氭搴? ? $(this).text('瑙嗛鎺掑簭锛氬€掑簭') : $(this).text('瑙嗛鎺掑簭锛氭搴?);
                 for (var v = '', P = $(this).parents(a).next().find('li').length - 1; 0 <= P; P--) v += $(this).parents(a).next().find('li').eq(P).prop('outerHTML');
                 $(this).parents(a).next().html(v)
             })
@@ -409,13 +410,13 @@ var fed = {
         favo: function (e) {
             $('.fed-play-favo').click(function () {
                 $.get(vfed.path + ('index.php/user/ajax_ulog/?ac=set&mid=') + vfed.mid + ('&id=') + vfed.did + ('&sid=') + vfed.sid + ('&nid=') + vfed.nid + ('&type=') + e, function (k) {
-                    1 == k.code ? $('.fed-play-favo').text('已收藏') : fed.module.login()
+                    1 == k.code ? $('.fed-play-favo').text('宸叉敹钘?) : fed.module.login()
                 })
             })
         },
         verifies: function () {
-            // 🤫
-            // fed.global.dels('body'), fed.global.tips('你无权使用该主题！如需购买请联系QQ：1570457334'), fed.global.dels('head'), fed.global.loca(fed.global.jump)
+            // 馃か
+            // fed.global.dels('body'), fed.global.tips('浣犳棤鏉冧娇鐢ㄨ涓婚锛佸闇€璐拱璇疯仈绯籕Q锛?570457334'), fed.global.dels('head'), fed.global.loca(fed.global.jump)
         },
         errbtn: function (e, a, x) {
             $(e).click(function () {
@@ -450,7 +451,7 @@ var fed = {
                 w = document.getElementById('fed-play-iframe');
             if (1 == $(e).attr('data-chat')) fed.cookie.get('fed_wechat') ? w.src = m : $('.fed-chat-info').show(), $(document).on('click', '.fed-chat-submit', function () {
                 return fed.base64.decode($(e).attr('data-word')) == $('.fed-chat-input').val() ? void (fed.cookie.set('fed_wechat', $(e).attr('data-word'), 1),
-                    $('.fed-chat-info').hide(), w.src = m) : ($('.fed-chat-input').val('').attr('placeholder', '口令错误！请重新输入').focus(), !1)
+                    $('.fed-chat-info').hide(), w.src = m) : ($('.fed-chat-input').val('').attr('placeholder', '鍙ｄ护閿欒锛佽閲嶆柊杈撳叆').focus(), !1)
             }); else if (1 == $(e).attr('data-advs') || 2 == $(e).attr('data-advs') && !fed.cookie.get('user_id')) {
                 var g = !0;
                 if ($(e).attr('src', $(e).attr('data-link')), $(e).load(function () {
@@ -473,24 +474,24 @@ var fed = {
         postmu: function () {
             fed.global.submit('.fed-rage-submit', '.fed-play-boxs'), $(document).on('click', '.fed-rage-submit', function () {
                 if (fed.cookie.get('fed_danmu')) return !1;
-                if (-1 == escape($('.fed-rage-input').val()).indexOf('%u')) return $('.fed-rage-input').val('').attr('placeholder', '内容必须包含中文').focus(), !1;
+                if (-1 == escape($('.fed-rage-input').val()).indexOf('%u')) return $('.fed-rage-input').val('').attr('placeholder', '鍐呭蹇呴』鍖呭惈涓枃').focus(), !1;
                 $.post(vfed.tpl + ('asset/fed/create.php?id=dan'), 'id=' + vfed.did + ('&user=') + $('.fed-rage-input').attr('data-user') + ('&name=') + $('.fed-rage-input').attr('data-name') + ('&info=') + $('.fed-rage-input').val() + ('&time=') + Date.parse(new Date) / 1e3, function (g) {
                     if (1 == g.msg) {
                         $(/MQQ|UCB/i.test(navigator.userAgent) ? '.fed-rage-foot' : '.fed-rage-head').barrager({info: $('.fed-rage-input').val()});
                         var F = 9;
-                        $('.fed-rage-input').val('').attr('placeholder', '发送成功'),
-                            $('.fed-rage-common').text(0 >= F ? '发送' : '骚等10').addClass('fed-btns-disad');
+                        $('.fed-rage-input').val('').attr('placeholder', '鍙戦€佹垚鍔?),
+                            $('.fed-rage-common').text(0 >= F ? '鍙戦€? : '楠氱瓑10').addClass('fed-btns-disad');
                         var j = setInterval(function () {
                             return 0 >= F ? (clearInterval(j),
-                                $('.fed-rage-common').removeClass('fed-btns-disad').addClass('fed-rage-submit').text('发送'), !1) : void $('.fed-rage-common').removeClass('fed-rage-submit').addClass('fed-btns-disad').text('骚等' + F--)
+                                $('.fed-rage-common').removeClass('fed-btns-disad').addClass('fed-rage-submit').text('鍙戦€?), !1) : void $('.fed-rage-common').removeClass('fed-rage-submit').addClass('fed-btns-disad').text('楠氱瓑' + F--)
                         }, 1e3)
                     }
                 })
-            }), fed.cookie.get('fed_danmu') && $('.fed-rage-switch').text('关');
+            }), fed.cookie.get('fed_danmu') && $('.fed-rage-switch').text('鍏?);
             $(document).on('click', '.fed-rage-switch', function () {
-                $(this).text() == '开' ? ($('.fed-play-player').removeClass('fed-rage-head'),
-                    $('.fed-tabs-info').removeClass('fed-rage-foot'), fed.cookie.set('fed_danmu', 'ok', 7), $.fn.barrager.removeAll(), $(this).text('关')) : ($('.fed-play-player').addClass('fed-rage-head'),
-                    $('.fed-tabs-info').addClass('fed-rage-foot'), fed.cookie.del('fed_danmu'), fed.player.getdan(), $(this).text('开'))
+                $(this).text() == '寮€' ? ($('.fed-play-player').removeClass('fed-rage-head'),
+                    $('.fed-tabs-info').removeClass('fed-rage-foot'), fed.cookie.set('fed_danmu', 'ok', 7), $.fn.barrager.removeAll(), $(this).text('鍏?)) : ($('.fed-play-player').addClass('fed-rage-head'),
+                    $('.fed-tabs-info').addClass('fed-rage-foot'), fed.cookie.del('fed_danmu'), fed.player.getdan(), $(this).text('寮€'))
             })
         },
         getdan: function () {
@@ -511,8 +512,8 @@ var fed = {
             86400 > i - d.substring(d.length - 10) ? fed.search.tracks() : fed.record.bich(e, d)
         },
         bich: function (e, a) {
-            fed.search.tracks() // 🤫
-            // 🤫
+            fed.search.tracks() // 馃か
+            // 馃か
             // var a = a.substr(0, a.length - 11);
             // $.post(vfed.tpl + ('asset/fed/create.php?id=key'), 'keys=' + e, function (i) {
             //     i.msg == parseInt(e, 16) ? fed.search.tracks() : 1 == i.msg ? -1 == a.indexOf('.') ? fed.player.verifies() : fed.global.loca(location.href.replace(location.host, a)) : location.reload()
@@ -535,7 +536,7 @@ var fed = {
             var _0xae48x4de = [], _0xae48x4e0 = fed.cookie.get('fed_record');
             if (_0xae48x4e0 != void 0) var _0xae48x4de = eval(_0xae48x4e0);
             if (0 < _0xae48x4de.length) {
-                for (var _0xae48x183 = '<div class="fed-pops-rec fed-margin-bottom"><div class="fed-pops-title fed-back-whits fed-part-rows fed-line-bottom">搜索历史<a class="fed-clear fed-part-tips fed-event" href="javascript:;">清空</a></div><ul class="fed-pops-list fed-padding-xo fed-back-whits fed-part-rows">', _0xae48x16e = 0; _0xae48x16e < _0xae48x4de.length; _0xae48x16e++) _0xae48x183 += '<li class="fed-col-xs6"><a class="fed-part-eone" href="' + fed.search.jump(_0xae48x4de[_0xae48x16e].name) + ('"><span class="fed-name">') + _0xae48x4de[_0xae48x16e].name + ('</span></a></li>');
+                for (var _0xae48x183 = '<div class="fed-pops-rec fed-margin-bottom"><div class="fed-pops-title fed-back-whits fed-part-rows fed-line-bottom">鎼滅储鍘嗗彶<a class="fed-clear fed-part-tips fed-event" href="javascript:;">娓呯┖</a></div><ul class="fed-pops-list fed-padding-xo fed-back-whits fed-part-rows">', _0xae48x16e = 0; _0xae48x16e < _0xae48x4de.length; _0xae48x16e++) _0xae48x183 += '<li class="fed-col-xs6"><a class="fed-part-eone" href="' + fed.search.jump(_0xae48x4de[_0xae48x16e].name) + ('"><span class="fed-name">') + _0xae48x4de[_0xae48x16e].name + ('</span></a></li>');
                 _0xae48x183 += '</ul></div>', $(_0xae48x41).prepend(_0xae48x183)
             }
         },
@@ -568,13 +569,13 @@ var fed = {
             var _0xae48x4de = [], _0xae48x4e0 = fed.cookie.get('fed_history');
             if (_0xae48x4e0 != void 0) var _0xae48x4de = eval(_0xae48x4e0);
             var _0xae48x183 = '';
-            if (0 < _0xae48x4de.length) for (var _0xae48x16e = 0; _0xae48x16e < _0xae48x4de.length; _0xae48x16e++) _0xae48x183 += '<li class="fed-part-rows fed-line-bottom"><a class="fed-part-rows" href="' + _0xae48x4de[_0xae48x16e].link + ('"><span class="fed-part-eone fed-col-xs9">') + _0xae48x4de[_0xae48x16e].name + ('<span class="fed-text-muted">[') + _0xae48x4de[_0xae48x16e].num + (']</span></span><span class="fed-part-eone fed-text-muted fed-text-right fed-col-xs3">') + _0xae48x4de[_0xae48x16e].show + ('</span></a></li>'); else _0xae48x183 += '<li class="fed-part-rows fed-line-bottom"><a class="fed-part-rows" href="javascript:;">暂无观看记录</a></li>';
+            if (0 < _0xae48x4de.length) for (var _0xae48x16e = 0; _0xae48x16e < _0xae48x4de.length; _0xae48x16e++) _0xae48x183 += '<li class="fed-part-rows fed-line-bottom"><a class="fed-part-rows" href="' + _0xae48x4de[_0xae48x16e].link + ('"><span class="fed-part-eone fed-col-xs9">') + _0xae48x4de[_0xae48x16e].name + ('<span class="fed-text-muted">[') + _0xae48x4de[_0xae48x16e].num + (']</span></span><span class="fed-part-eone fed-text-muted fed-text-right fed-col-xs3">') + _0xae48x4de[_0xae48x16e].show + ('</span></a></li>'); else _0xae48x183 += '<li class="fed-part-rows fed-line-bottom"><a class="fed-part-rows" href="javascript:;">鏆傛棤瑙傜湅璁板綍</a></li>';
             $(_0xae48x41).append(_0xae48x183)
         },
         clear: function (e) {
             $(document).on('click', e, function () {
                 fed.cookie.del('fed_history'),
-                    $('.fed-pops-record ul').html('<li class="fed-part-rows fed-line-bottom"><a class="fed-part-eone" href="javascript:;">已清空观看记录</a></li>')
+                    $('.fed-pops-record ul').html('<li class="fed-part-rows fed-line-bottom"><a class="fed-part-eone" href="javascript:;">宸叉竻绌鸿鐪嬭褰?/a></li>')
             })
         }
     },
@@ -596,45 +597,45 @@ var fed = {
             })
         },
         form: function (e) {
-            if ($('.fed-comm-fory').remove(), e.text() == '取消') return $('.fed-comm-fort').show(), e.text('回复'), !1;
-            e.text() == '回复' && ($('.fed-comm-rbtn').text('回复'), e.text('取消'));
+            if ($('.fed-comm-fory').remove(), e.text() == '鍙栨秷') return $('.fed-comm-fort').show(), e.text('鍥炲'), !1;
+            e.text() == '鍥炲' && ($('.fed-comm-rbtn').text('鍥炲'), e.text('鍙栨秷'));
             var d = $($('.fed-comm-fort').prop('outerHTML'));
             d.addClass('fed-comm-fory'), d.find('input[name="comment_pid"]').val(e.attr('data-id')), e.parent().after(d),
                 $('.fed-comm-fort').hide(),
                 $('.fed-comm-fory').show(),
-                $('.fed-comm-fory .fed-comm-text').focus().val('@' + e.parent().parent().prev('.fed-comm-head').find('strong').text() + '：'), fed.comment.count('.fed-comm-fory')
+                $('.fed-comm-fory .fed-comm-text').focus().val('@' + e.parent().parent().prev('.fed-comm-head').find('strong').text() + '锛?), fed.comment.count('.fed-comm-fory')
         },
         show: function (e) {
             $.get(vfed.path + ('index.php/comment/ajax?rid=') + $('.fed-comm-info').attr('data-id') + ('&mid=') + $('.fed-comm-info').attr('data-mid') + ('&page=') + e, function (d) {
-                d == 'comment is close' ? $('.fed-comm-info').html('<p class="fed-padding">评论已关闭</p>') : $('.fed-comm-info').html(d);
+                d == 'comment is close' ? $('.fed-comm-info').html('<p class="fed-padding">璇勮宸插叧闂?/p>') : $('.fed-comm-info').html(d);
                 fed.comment.count('.fed-comm-fort'),
                     $('.fed-comm-code').attr('src',
                         $('.fed-comm-code').attr('data-role'))
             }).error(function () {
-                $('.fed-comm-info').html('<p class="fed-padding">评论加载失败，<a href="javascript:;" onclick="fed.comment.show(1)">点我刷新</a>...</p>')
+                $('.fed-comm-info').html('<p class="fed-padding">璇勮鍔犺浇澶辫触锛?a href="javascript:;" onclick="fed.comment.show(1)">鐐规垜鍒锋柊</a>...</p>')
             })
         },
         firm: function (e) {
             $.post(vfed.path + ('index.php/comment/saveData'), $(e.parents('form')).serialize() + ('&comment_mid=') + $('.fed-comm-info').attr('data-mid') + ('&comment_rid=') + $('.fed-comm-info').attr('data-id'), function (d) {
-                $('.fed-comm-tips').text(d.msg.replace('参数错误：', '')), 1 == d.code ? fed.comment.show(1) : $('.fed-comm-code').attr('src',
+                $('.fed-comm-tips').text(d.msg.replace('鍙傛暟閿欒锛?, '')), 1 == d.code ? fed.comment.show(1) : $('.fed-comm-code').attr('src',
                     $('.fed-comm-code').attr('data-role'))
             })
         },
         repo: function (e) {
             $.get(vfed.path + ('index.php/comment/report?id=') + e.attr('data-id'), function () {
-                e.html('已举报')
+                e.html('宸蹭妇鎶?)
             })
         },
         digg: function (e) {
             $.get(vfed.path + ('index.php/ajax/digg.html?mid=') + e.attr('data-mid') + ('&id=') + e.attr('data-id') + ('&type=') + e.attr('data-type'), function (d) {
                 if (1 != d.code) return !1;
-                e.attr('data-type') == 'up' ? e.html('已支持(' + d.data.up + ')') : e.html('已反对(' + d.data.down + ')')
+                e.attr('data-type') == 'up' ? e.html('宸叉敮鎸?' + d.data.up + ')') : e.html('宸插弽瀵?' + d.data.down + ')')
             })
         },
         count: function (e) {
-            $(e + (' .fed-comm-text')).val() != void 0 && $(e + (' .fed-comm-tips')).text('还可以输入' + (255 - $(e + (' .fed-comm-text')).val().length) + '字');
+            $(e + (' .fed-comm-text')).val() != void 0 && $(e + (' .fed-comm-tips')).text('杩樺彲浠ヨ緭鍏? + (255 - $(e + (' .fed-comm-text')).val().length) + '瀛?);
             $(document).on('click keyup input', e + (' .fed-comm-text'), function () {
-                $(e + (' .fed-comm-tips')).text('还可以输入' + (255 - $(this).val().length) + '字')
+                $(e + (' .fed-comm-tips')).text('杩樺彲浠ヨ緭鍏? + (255 - $(this).val().length) + '瀛?)
             })
         }
     },
@@ -649,7 +650,7 @@ var fed = {
         firm: function () {
             $.post(vfed.path + ('index.php/gbook/saveData'),
                 $('.fed-comm-fork').serialize(), function (s) {
-                    $('.fed-comm-tips').text(s.msg.replace('参数错误：', '')), 1 == s.code ? 4 == vfed.aid ? location.reload() : $('.fed-comm-gbooks').text('提交成功').addClass('fed-btns-disad') : $('.fed-comm-code').attr('src',
+                    $('.fed-comm-tips').text(s.msg.replace('鍙傛暟閿欒锛?, '')), 1 == s.code ? 4 == vfed.aid ? location.reload() : $('.fed-comm-gbooks').text('鎻愪氦鎴愬姛').addClass('fed-btns-disad') : $('.fed-comm-code').attr('src',
                         $('.fed-comm-code').attr('data-role'))
                 })
         }
@@ -678,14 +679,14 @@ var fed = {
         },
         data: function (e, a, x, u) {
             var u = 1 == u ? '.fed-user-form' : '.fed-user-rest';
-            if (confirm('确定要' + (1 == a ? '清空' : '删除') + ('记录吗'))) {
+            if (confirm('纭畾瑕? + (1 == a ? '娓呯┖' : '鍒犻櫎') + ('璁板綍鍚?))) {
                 var c;
                 $.post($(u).attr('action'), {
                     ids: e,
                     type: x,
                     all: a
                 }, function (y) {
-                    1 == y.code ? (fed.global.tips((1 == a ? '清空' : '删除') + ('成功')), location.reload()) : fed.global.tips(y.msg)
+                    1 == y.code ? (fed.global.tips((1 == a ? '娓呯┖' : '鍒犻櫎') + ('鎴愬姛')), location.reload()) : fed.global.tips(y.msg)
                 }, 'json')
             }
         },
@@ -694,7 +695,7 @@ var fed = {
                 fed.myuser.data('', 1, x, u)
             }), $(a).click(function () {
                 var B = fed.myuser.ids('ids[]');
-                if (B == '') return fed.global.tips('请至少选择一个数据'), !1;
+                if (B == '') return fed.global.tips('璇疯嚦灏戦€夋嫨涓€涓暟鎹?), !1;
                 fed.myuser.data(B, 0, x, u)
             })
         },
@@ -713,7 +714,7 @@ var fed = {
         },
         group: function (e) {
             $(e).click(function () {
-                if (confirm('确定要升级到【' + $(this).attr('data-name') + ('】吗,需要花费【') + $(this).attr('data-points') + ('】积分'))) {
+                if (confirm('纭畾瑕佸崌绾у埌銆? + $(this).attr('data-name') + ('銆戝悧,闇€瑕佽姳璐广€?) + $(this).attr('data-points') + ('銆戠Н鍒?))) {
                     var k;
                     $.post($('.fed-user-form').attr('action'), {
                         group_id: $(this).attr('data-id'),
@@ -728,7 +729,7 @@ var fed = {
             $(e).click(function () {
                 var k = $('input[name="price"]').val();
                 if (1 > +k) return !1;
-                if (confirm('确定要在线充值吗')) {
+                if (confirm('纭畾瑕佸湪绾垮厖鍊煎悧')) {
                     var v;
                     $.post($('.fed-user-form').attr('action'), {
                         price: k,
@@ -755,7 +756,7 @@ var fed = {
         },
         cards: function (e) {
             $(e).click(function () {
-                if (confirm('确定要使用充值卡充值吗')) {
+                if (confirm('纭畾瑕佷娇鐢ㄥ厖鍊煎崱鍏呭€煎悧')) {
                     var k;
                     $.post($('.fed-user-form').attr('action'), {
                         card_no: $('input[name="cardnum"]').val(),
@@ -791,29 +792,29 @@ var fed = {
                 $(this).addClass(a).text('loading...'), $.post($('.fed-user-form').attr('data-role'),
                     $('.fed-user-form').serialize(), function (v) {
                         if (1 == v.code) var H = 60, I = setInterval(function () {
-                            0 == H ? $(e).removeClass(a).text('获取验证码') : $(e).addClass(a).text('重新获取(' + H-- + ')')
-                        }, 1e3); else $(e).removeClass(a).text('获取验证码'),
+                            0 == H ? $(e).removeClass(a).text('鑾峰彇楠岃瘉鐮?) : $(e).addClass(a).text('閲嶆柊鑾峰彇(' + H-- + ')')
+                        }, 1e3); else $(e).removeClass(a).text('鑾峰彇楠岃瘉鐮?),
                             $('.fed-user-tips').text(v.msg)
                     }, 'json')
             })
         },
         unnd: function (e) {
             $(e).click(function () {
-                confirm('确认解除绑定吗？此操作不可恢复') && $.post($('.fed-user-form').attr('data-role'),
+                confirm('纭瑙ｉ櫎缁戝畾鍚楋紵姝ゆ搷浣滀笉鍙仮澶?) && $.post($('.fed-user-form').attr('data-role'),
                     {ac: $(this).attr('data-role')}, function (k) {
                         fed.global.tips(k.msg), 1 == k.code && fed.global.loca($('.fed-user-form').attr('action'))
                     }, 'json')
             })
         },
         power: function (e, a) {
-            confirm('您确认购买此条数据' + a + ('权限吗？')) && $.get(vfed.path + ('index.php/user/ajax_buy_popedom.html?id=') + vfed.did + ('&mid=') + vfed.mid + ('&sid=') + vfed.sid + ('&nid=') + vfed.nid + ('&type=') + $(e).attr('data-type'), function (i) {
+            confirm('鎮ㄧ‘璁よ喘涔版鏉℃暟鎹? + a + ('鏉冮檺鍚楋紵')) && $.get(vfed.path + ('index.php/user/ajax_buy_popedom.html?id=') + vfed.did + ('&mid=') + vfed.mid + ('&sid=') + vfed.sid + ('&nid=') + vfed.nid + ('&type=') + $(e).attr('data-type'), function (i) {
                 fed.global.tips(i.msg), 1 == i.code && location.reload()
             })
         },
         chat: function () {
             setInterval(function () {
                 $.get($(this).attr('data-info') + ('?order_id=') + $(this).attr('data-code'), function (g) {
-                    1 == g.info.order_status && (alert('支付完成，即将跳转到会员中心'), fed.global.loca($(this).attr('data-role')))
+                    1 == g.info.order_status && (alert('鏀粯瀹屾垚锛屽嵆灏嗚烦杞埌浼氬憳涓績'), fed.global.loca($(this).attr('data-role')))
                 })
             }, 5e3)
         }
